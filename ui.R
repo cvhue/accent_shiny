@@ -1,20 +1,4 @@
-shinyUI(bootstrapPage(
 
-
-    # Decimal interval with step value
-    sliderInput("decimal", "Preference:", 
-                min = 0, max = 1, value = 0.5, step= 0.1),
-
-  plotOutput(outputId = "main_plot", height = "300px"),
-
-  # Display this only if the density is shown
-  conditionalPanel(condition = "input.density == true",
-    sliderInput(inputId = "bw_adjust",
-                label = "Bandwidth adjustment:",
-                min = 0.2, max = 2, value = 1, step = 0.2)
-  )
-
-))
 library(shiny)
 
 # Define UI for random distribution application
